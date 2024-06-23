@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  color: #222;
+  height: 100%;
+  margin: 0;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://img.freepik.com/free-vector/modern-elegant-blue-watercolor-background_1055-6821.jpg?t=st=1718086661~exp=1718090261~hmac=eae32805765342de8b013a6cd7151c4acc7b47a91f2e84f8927cf199b4a3ac3c&w=740') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Adjust the opacity as needed */
+  z-index: 0;
+}
+
+
+a,
+button {
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+}
+
+.main-content {
+  padding: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  align-items: center;
+}
+
+header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+header a.logo {
+  font-weight: 900;
+  font-size: 2rem;
+  font-family: "Kanit", sans-serif;
+}
+
+header nav {
+  display: flex;
+  gap: 15px;
+}
+
+.post {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 0.9fr 1.1fr;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+
+.post .texts h2 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+.post .texts a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.post p.info {
+  margin: 6px 0;
+  color: #888;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: flex;
+  gap: 5px;
+}
+
+.post p.info a.author {
+  color: #333;
+}
+
+.post p.summary {
+  margin: 6px 0;
+  line-height: 1.4rem;
+}
+
+.login,
+.register {
+
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+
+input {
+  display: block;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 5px 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  display: block;
+  background-color: #555;
+  border: 0;
+  color: #fff;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+
+form.login,
+form.register h1 {
+  text-align: center;
+}
+
+
+.post-page .image {
+  max-height: 300px;
+  overflow: hidden;
+  display: flex;
+}
+
+
+.post-page .image img {
+  object-fit: contain;
+  object-position: center;
+  width: 100%;
+}
+
+
+.post-page a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.post-page h1 {
+  text-align: center;
+  margin: 10px 0 5px;
+}
+
+.post-page time {
+  text-align: center;
+  display: block;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+.post-page .author {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.edit-row {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.post-page .edit-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+a svg {
+  height: 20px;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+}
+
+
+@media screen and (max-width: 600px) {
+  .post {
+    grid-template-columns: 1fr;
+  }
+
+  .post-page {
+    overflow: hidden;
+  }
+
+  .post-page .content {
+    overflow-x: scroll;
+  }
+
+  .icons {
+    display: flex;
+    gap: 2px;
+    flex-direction: column;
+  }
+
+}
